@@ -1,4 +1,4 @@
-
+![Mangrove forest](/img/forgit2.jpg)
 
 # welcome!
 My name is Lena R. Capece (MSc, PhD). I am a biogeochemist and coastal marine scientist who specializes in understanding carbon cycling in blue carbon, coastal marine and other aquatic ecosystems.
