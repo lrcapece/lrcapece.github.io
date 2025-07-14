@@ -1,4 +1,4 @@
-![Image of Lena R. Capece](https://lena-capece.weebly.com/uploads/1/2/0/8/120849115/edited/img-1497.jpg)
+!img/for_git2.HEIC
 
 # welcome!
 My name is Lena R. Capece (MSc, PhD). I am a biogeochemist and coastal marine scientist who specializes in understanding carbon cycling in blue carbon, coastal marine and other aquatic ecosystems.
