@@ -68,6 +68,7 @@ nav {
   color: var(--deep-clay);
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .nav-links {
