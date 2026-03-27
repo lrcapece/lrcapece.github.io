@@ -5,6 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About · Lena R. Capece</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .headshot-wrap {
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--mist), var(--sand-dark));
+      border: 1px solid var(--stone);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--stone);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .headshot-wrap img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .headshot-wrap svg { opacity: 0.35; }
+  </style>
 </head>
 <body>
 
@@ -33,10 +65,11 @@
 
   <div class="content-section">
     <div class="about-grid">
+
       <div class="about-text fade-in">
         <p>I am a coastal scientist and biogeochemist with nearly a decade of experience studying marine and coastal ecosystems, specializing in blue carbon across tidal marshes, mangroves, and seagrass systems.</p>
 
-        <p>I am currently an Associate in Blue Carbon Science and Implementation at Silvestrum Climate Associates, where I work at the intersection of rigorous science and real-world conservation outcomes — translating research into actionable strategies for carbon markets, ecosystem monitoring, and coastal restoration.</p>
+        <p>I am currently an Associate in Blue Carbon Science and Implementation at <a href="https://www.silvestrum.com" style="color: var(--tide);">Silvestrum Climate Associates</a>, where I work at the intersection of rigorous science and real-world conservation outcomes — translating research into actionable strategies for carbon markets, ecosystem monitoring, and coastal restoration.</p>
 
         <p>I completed my PhD in Earth Science at UC Santa Barbara in the <a href="https://www.ravennoiselab.com/" style="color: var(--tide);">Raven NOISE Lab</a>, where my doctoral research investigated sulfur-carbon interactions in blue carbon ecosystems including mangroves and salt marshes. Prior to that, I earned my MSc in Geology from UC Davis in the <a href="http://www.oceanclimatelab.com" style="color: var(--tide);">Ocean Climate Lab</a>, studying carbon sequestration in California seagrass meadows.</p>
 
@@ -46,6 +79,20 @@
       </div>
 
       <div class="about-sidebar fade-in">
+
+        <!-- 
+          HEADSHOT: Upload your photo to images/headshot.jpg in your repo,
+          then replace the placeholder div contents with just:
+          <img src="images/headshot.jpg" alt="Lena R. Capece">
+        -->
+        <div class="headshot-wrap">
+          <!-- Replace this block with: <img src="images/headshot.jpg" alt="Lena R. Capece"> -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <span>Add headshot</span>
+        </div>
+
         <div class="sidebar-block">
           <h3>Education</h3>
           <ul>
@@ -81,6 +128,7 @@
             <li>UCSB Coastal Fund Grant · $8,777 · 2020</li>
           </ul>
         </div>
+
       </div>
     </div>
   </div>

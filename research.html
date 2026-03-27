@@ -5,6 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research · Lena R. Capece</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Field photo grid ── */
+    .field-photos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 48px 0 64px;
+    }
+
+    .field-photo {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--mist), var(--sand-dark));
+      border: 1px solid var(--stone);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+      color: var(--stone);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      aspect-ratio: 3/4;
+      transition: transform 0.3s ease;
+    }
+
+    .field-photo:hover { transform: translateY(-4px); }
+    .field-photo svg { opacity: 0.3; }
+
+    /* Shape variants */
+    .field-photo:nth-child(1) { border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; }
+    .field-photo:nth-child(2) { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    .field-photo:nth-child(3) { border-radius: 50%; }
+    .field-photo:nth-child(4) { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+
+    .field-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .field-photo .photo-label {
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .field-photo:hover .photo-label { opacity: 1; }
+
+    @media (max-width: 768px) {
+      .field-photos { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
 </head>
 <body>
 
@@ -32,9 +97,36 @@
   </div>
 
   <div class="content-section">
+
+    <!--
+      FIELD PHOTOS: Upload 4 field photos to images/field/ in your repo.
+      Replace each placeholder below with:
+      <div class="field-photo">
+        <img src="images/field/yourphoto.jpg" alt="Description">
+        <span class="photo-label">Location</span>
+      </div>
+    -->
+    <div class="field-photos">
+      <div class="field-photo fade-in">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+        <span>Field photo</span>
+      </div>
+      <div class="field-photo fade-in">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+        <span>Field photo</span>
+      </div>
+      <div class="field-photo fade-in">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+        <span>Field photo</span>
+      </div>
+      <div class="field-photo fade-in">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+        <span>Field photo</span>
+      </div>
+    </div>
+
     <p class="section-label">Current Projects</p>
 
-    <!-- PROJECT 1 -->
     <div class="project-block fade-in">
       <span class="project-status status-current">Current · Published & In Prep</span>
       <h2>Organic Matter Sulfurization and Pyrite Formation in Blue Carbon Ecosystems</h2>
@@ -42,12 +134,9 @@
       <p>Organic matter sulfurization and pyritization have been proposed as mechanisms that can enhance the carbon sink capacity of blue carbon ecosystems. My research investigates these processes across a range of coastal wetland systems to establish a foundational framework for the field.</p>
       <p>In a Southern California salt marsh, I found that pyritization dominates over sulfurization at the study site, though sulfurization appears to be a more spatially consistent process across vegetation zones — with implications for how carbon storage is estimated across different ecosystem types. Evidence for sulfurization is concentrated in the shallowest sediments across multiple vegetation zones, yielding consistent products, while pyritization is more sensitive to shifts in sediment redox conditions.</p>
       <p>Complementary work tracing organic sulfur cycling in mangrove ecosystems — from biomass into the dissolved pool — is currently in preparation.</p>
-      <a href="https://aslopubs.onlinelibrary.wiley.com/doi/10.1002/lno.70089" class="pub-link" target="_blank">
-        Published in Limnology &amp; Oceanography (2025) →
-      </a>
+      <a href="https://aslopubs.onlinelibrary.wiley.com/doi/10.1002/lno.70089" class="pub-link" target="_blank">Published in Limnology &amp; Oceanography (2025) →</a>
     </div>
 
-    <!-- PROJECT 2 -->
     <div class="project-block fade-in">
       <span class="project-status status-current">Current · In Prep</span>
       <h2>Investigating Blue Carbon Sources and Sinks in Seagrass Meadows of Moorea, French Polynesia</h2>
@@ -56,7 +145,6 @@
       <p>I designed and led a two-week international field campaign in French Polynesia coordinating seagrass surveys, sediment carbon sampling, porewater dynamics, and eDNA collection. A manuscript is in preparation.</p>
     </div>
 
-    <!-- PROJECT 3 -->
     <div class="project-block fade-in">
       <span class="project-status status-current">Current · In Prep</span>
       <h2>Understanding Ocean Careers and Climate Optimism Through Podcasting</h2>
@@ -64,21 +152,19 @@
       <p>As part of my doctoral work, I produced multiple seasons of the <em>Ocean Solutions Podcast</em>, interviewing professionals working across ocean science, policy, management, and entrepreneurship in California. The podcast focuses on career pathways and personal stories to broaden listeners' sense of what ocean-related work can look like.</p>
       <p>To evaluate the podcast as an educational tool, I led an IRB-approved study assessing its impact on academic engagement and ocean literacy in a collegiate classroom setting. A manuscript reporting these findings is in preparation.</p>
     </div>
+
   </div>
 
   <div class="content-section">
     <p class="section-label">Past Projects</p>
 
-    <!-- PAST PROJECT -->
     <div class="project-block fade-in">
       <span class="project-status status-past">Past · Published</span>
       <h2>Multi-Scale Variability of Blue Carbon Storage in California Seagrass Meadows</h2>
       <p class="project-meta">UC Davis · CA Ocean Protection Council · 2017–2019</p>
       <p>My Master's research investigated carbon storage variability and organic matter sources across three <em>Zostera marina</em> seagrass meadows in California estuaries. I found that carbon storage varies as much within a single meadow as it does across regions, and that sediment grain size (mud content) is the strongest predictor of carbon storage — pointing to the importance of mineral-organic matter interactions in long-term carbon preservation. Approximately one quarter of organic carbon in seagrass sediments was derived from seagrass itself, with the remainder from allochthonous sources.</p>
       <p>This work provides the highest spatial resolution study of blue carbon in a seagrass ecosystem and underscores the need for fine-scale spatial data when estimating the carbon sink capacity of individual meadows.</p>
-      <a href="https://doi.org/10.1029/2024JG008526" class="pub-link" target="_blank">
-        Published in JGR Biogeosciences (2025) →
-      </a>
+      <a href="https://doi.org/10.1029/2024JG008526" class="pub-link" target="_blank">Published in JGR Biogeosciences (2025) →</a>
     </div>
   </div>
 
